@@ -54,7 +54,7 @@ export default App
 ```javascript
 import { useState, useEffect } from "react"
 
-const Weather = ({ city }) => {
+const WeatherApp = ({ city }) => {
   useEffect(() => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=xxxxxx&units=metric&lang=fr`
     fetch(url)
@@ -74,12 +74,12 @@ const Weather = ({ city }) => {
 
   return (
     <section className="text-center">
-      <h2 className="mb-4">Conditions météo à Paris</h2>
+      <h2 className="mb-4">Conditions météo = Paris</h2>
     </section>
   )
 }
 
-export default Weather
+export default WeatherApp
 ```
 
 Quelle informations de `data` allons nous utiliser ? Nous pouvons opter pour :
@@ -130,7 +130,7 @@ import Description from "./Description"
 import Temperature from "./Temperature"
 import Humidity from "./Humidity"
 
-const Weather = ({ city }) => {
+const WeatherApp = ({ city }) => {
   const [conditions, setConditions] = useState({})
   const [description, setDescription] = useState("")
   const [iconID, setIconID] = useState("")
@@ -164,7 +164,7 @@ const Weather = ({ city }) => {
       {!!location && (
         <section className="text-center">
           <Icon iconID={iconID} />
-          <h2 className="mb-4">Conditions météo à {location}</h2>
+          <h2 className="mb-4 display-6">Conditions météo : {location}</h2>
           <Description description={description} />
           <Temperature mainTemp={mainTemp} feelsLike={feelsLike} />
           <Humidity humidity={humidity} />
@@ -174,7 +174,7 @@ const Weather = ({ city }) => {
   )
 }
 
-export default Weather
+export default WeatherApp
 ```
 
 ## Description
@@ -273,7 +273,7 @@ const CityForm = ({ setCity }) => {
   return (
     <form onSubmit={handleFormSubmit}>
       <div className="input-group mb-2">
-        <label className="input-group-text" htmlFor="city">
+        <label className="input-group-text display-4" htmlFor="city">
           Choisissez une ville
         </label>
         <input className="form-control" id="city" required />
