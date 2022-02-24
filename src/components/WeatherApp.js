@@ -3,6 +3,7 @@ import Icon from "./Icon";
 import Description from "./Description";
 import Temperature from "./Temperature";
 import Humidity from "./Humidity";
+import Location from "./Location";
 
 const WeatherApp = ({ city }) => {
   const [conditions, setConditions] = useState({});
@@ -46,7 +47,7 @@ const WeatherApp = ({ city }) => {
   return (
     <section className="text-center">
       <Icon iconID={iconID} />
-      <h1 className="mb-4">Conditions météo : {location}</h1>
+      <Location location={location} />
       <Description description={description} />
       <Temperature mainTemp={mainTemp} feelsLike={feelsLike} />
       <Humidity humidity={humidity} />

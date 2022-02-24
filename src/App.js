@@ -7,7 +7,7 @@ function App() {
   const [city, setCity] = useState("Paris");
   return (
     <div className="container my-4">
-      <h1 className="display-2 text-center text-white mb-4">Météo Actuelle</h1>
+      <h1 className="display-2 text-center text-white mb-2">Météo Actuelle</h1>
       <WeatherApp city={city} />
       <CityForm city={city} setCity={setCity} />
     </div>
