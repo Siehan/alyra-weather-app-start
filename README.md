@@ -1,5 +1,7 @@
 # Weather App
 
+<https://alyra-weather-app-start-smy.netlify.app/>
+
 ## Installation
 
 Ce projet est créé avec CRA et utilise Bootstrap 5.
@@ -108,12 +110,12 @@ Attention le nom de la variable [doit commencer par REACT_APP](https://create-re
 touch .env.local
 ```
 
-```
-# .env.local
+```bash
+.env.local
 REACT_APP_OPENWEATHER_API_KEY=votrekeyvientici
 ```
 
-Ensuite, dans `WeatherApp.js` nous allons avoir accès à notre key en tant qu `process.env.REACT_APP_OPENWEATHER_API_KEY`
+Ensuite, dans `WeatherApp.js` nous allons avoir accès à notre key en tant que `process.env.REACT_APP_OPENWEATHER_API_KEY`
 
 ## Décomposer WeatherApp en plusieurs components
 
